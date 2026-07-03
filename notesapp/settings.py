@@ -94,7 +94,7 @@ DATABASES = {
         'NAME': os.environ.get('MYSQL_DATABASE', 'notesdb') ,
         'USER': os.environ.get('MYSQL_USER', 'root'),
         'PASSWORD': os.environ.get('MYSQL_PASSWORD', 'root'),
-        'HOST': os.environ.get('MYSQL_HOST', 'mysqldb'),
+        'HOST': os.environ.get('MYSQL_HOST', 'mysqldb_notes'),
         'PORT': os.environ.get('MYSQL_PORT', '3306'),
     }
 }

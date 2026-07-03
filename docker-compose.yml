@@ -20,7 +20,7 @@ services:
     image: nithingowda46/notes-app:latest
     env_file:
       - .env
-    container_name: myapp
+    container_name: mynotesapp
     depends_on:
         mysqldb_notes:
           condition: service_healthy
