@@ -1,9 +1,9 @@
 version: "3.8"
 services:
-  mysqldb:
+  mysqldb_notes:
     restart: always
     image: mysql:8.0
-    container_name: mysqldb
+    container_name: mysqldb_notes
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: notesdb
@@ -15,14 +15,14 @@ services:
       - "3308:3306"
     volumes:
       - mysqldb_data:/var/lib/mysql
-  myapp:
+  mynotesapp:
     build: .
-    image: notes-app:latest
+    image: nithingowda46/notes-app:latest
     env_file:
       - .env
     container_name: myapp
     depends_on:
-        mysqldb:
+        mysqldb_notes:
           condition: service_healthy
     ports:
       - "8000:8000"
