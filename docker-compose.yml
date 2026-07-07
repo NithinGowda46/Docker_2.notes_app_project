@@ -7,6 +7,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: notesdb
+      MYSQL_USER: nithin
+      MYSQL_PASSWORD: nithin
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost","-uroot","-proot"]
       timeout: 10s
