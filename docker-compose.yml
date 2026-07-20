@@ -4,11 +4,8 @@ services:
     restart: always
     image: mysql:8.0
     container_name: mysqldb-notes
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: notesdb
-      MYSQL_USER: nithin
-      MYSQL_PASSWORD: nithin
+    env_file:
+      - .env
     healthcheck:
       test: ["CMD", "mysqladmin", "ping", "-h", "localhost","-uroot","-proot"]
       timeout: 10s
