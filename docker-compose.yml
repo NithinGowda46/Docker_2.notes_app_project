@@ -24,7 +24,7 @@ services:
       - .env
     container_name: mynotesapp
     depends_on:
-        mysqldb_notes:
+        mysqldb-notes:
           condition: service_healthy
     ports:
       - "8000:8000"
